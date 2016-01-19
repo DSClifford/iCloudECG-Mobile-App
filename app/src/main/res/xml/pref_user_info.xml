@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="email"
+        android:title="@string/pref_user_email"
+        android:defaultValue=" "
+        android:selectAllOnFocus="true"
+        android:inputType="textEmailAddress"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:summary="@string/pref_description_user_email"/>
+    <EditTextPreference
+        android:key="first_name"
+        android:title="@string/pref_user_fname"
+        android:defaultValue=" "
+        android:selectAllOnFocus="true"
+        android:inputType="textPersonName"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"/>
+    <EditTextPreference
+        android:key="last_name"
+        android:title="@string/pref_user_lname"
+        android:defaultValue=" "
+        android:selectAllOnFocus="true"
+        android:inputType="textPersonName"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"/>
+    <EditTextPreference
+        android:key="bdate"
+        android:title="@string/prompt_bdate"
+        android:selectAllOnFocus="true"
+        android:inputType="date"
+        android:singleLine="true"
+        android:maxLines="1"/>
+    <ListPreference
+        android:key="gender"
+        android:title="@string/prompt_gender"
+        android:entries="@array/pref_gender_titles"
+        android:entryValues="@array/pref_gender_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+</PreferenceScreen>

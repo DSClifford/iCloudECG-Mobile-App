@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="edu.utk.biodynamics.icloudecg.GraphingUtils.ViewRecordChart">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/record_date_time"
+        android:id="@+id/record_date_time"
+        android:layout_gravity="left|top"
+        android:textColor="#e4494949"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/record_diagnosis"
+        android:id="@+id/record_diagnosis"
+        android:layout_gravity="center_horizontal|top"
+        android:textColor="#e3494949" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="HR: ___ bpm"
+        android:id="@+id/record_hr"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="10dp"
+        android:textColor="#e3494949" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/record_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="25dp"/>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="backBtnAction"
+                android:text="@string/record_view_done_btn" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

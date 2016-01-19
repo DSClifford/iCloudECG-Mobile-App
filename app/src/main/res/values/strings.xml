@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">iCloudECG</string>
+
+    <string name="title_section1">View ECG</string>
+    <string name="title_section2">My Records</string>
+    <string name="title_section3">Help</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">ViewECG fragment</string>
+    <string name="view_records_fragment">ViewRecords fragment</string>
+    <string name="upload_records_fragment">UploadRecords Fragment</string>
+    <string name="title_viewecg">View ECG</string>
+    <string name="title_my_records">View Records</string>
+    <string name="title_view_alerts">View Alerts</string>
+    <string name="HR_label_text">HR</string>
+    <string name="connection_status">Not Connected</string>
+    <string name="cstatus_label">Connection Status</string>
+    <string name="connect_text">Connect</string>
+    <string name="disconnect_text">Disconnect</string>
+    <string name="send_text">Send File</string>
+    <string name="preference_file_key">iCloudECGPreferencesFile</string>
+
+    <string name="title_activity_view_record_chart">ECG View</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="record_view_done_btn">Done</string>
+    <string name="record_date_time">Unset</string>
+    <string name="record_diagnosis">Unset</string>
+    <string name="no_rec_text">You don\'t have any records yet</string>
+    <string name="BR_label_text">BR</string>
+    <string name="grid_legend">50 mm/sec</string>
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
+    <string name="pref_key_SENT_TOKEN_TO_SERVER">TokenSentToServer</string>
+    <string name="intent_name_REGISTRATION_COMPLETE">RegistrationComplete</string>
+    <string name="title_activity_login_register">LoginRegisterActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="prompt_fname">First Name</string>
+    <string name="prompt_lname">Last Name</string>
+    <string name="prompt_bdate">Date of Birth</string>
+    <string name="prompt_password_confirm">Confirm Password</string>
+    <string name="gcm_token_keyname">GCM Token</string>
+    <string name="prompt_gender">Gender</string>
+    <string name="female_btn_val">Female</string>
+    <string name="male_btn_val">Male</string>
+    <string name="password_no_match_error">Passwords don\'t match</string>
+    <string name="pref_user_fname">First Name</string>
+    <string name="pref_user_lname">Last Name</string>
+    <string name="pref_description_user_email">This is also your login username</string>
+    <string name="pref_header_user_info">User Information</string>
+    <string name="wifi_only_title">Wi-Fi Only Uploads</string>
+    <string name="wifi_only_description">If enabled, ECG records are saved and uploaded for analysis only when Wi-Fi becomes available</string>
+    <string name="hours_title"><u>Hours</u></string>
+    <string name="minutes_title"><u>Minutes</u></string>
+    <string name="seconds_title"><u>Seconds</u></string>
+    <string name="dbInsertIndex">dbInsertIndex</string>
+    <string name="dbInsertIndex2">dbInsertIndex</string>
+    <string name="title_activity_analysis_results">AnalysisResults</string>
+    <string name="event_flag_btn">Event Flag</string>
+    <string name="test_notif_btn">Test Notification</string>
+    <string name="analysis_results">Analysis Results</string>
+    <string name="analysisHRText">Heart Rate</string>
+    <string name="analysisTimeText">Record Date/Time</string>
+</resources>

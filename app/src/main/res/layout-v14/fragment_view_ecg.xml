@@ -1,0 +1,222 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.utk.biodynamics.icloudecg.ViewECGFragment">
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:id="@+id/no_bh_popup"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/abc_dialog_material_background_light"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/bt_nc"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:onClick="connectToBH" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="BioHarness is not currently connected"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/imageView"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Press the icon to connect your device"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="6dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@id/ECGgraph"
+            android:layout_width="fill_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible" />
+
+        <edu.utk.biodynamics.icloudecg.GraphingUtils.LineGraph
+            android:id="@+id/GridBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/HR_label"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/hr_icon"
+            android:alpha="0.8"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp"
+            android:shadowColor="#000a15" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/HR_label_text"
+            android:id="@+id/hr_num"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="#010101"
+            android:layout_alignTop="@+id/HR_label"
+            android:layout_marginTop="16dp"
+            android:layout_alignStart="@id/HR_label"
+            android:layout_alignLeft="@id/HR_label"
+            android:layout_alignEnd="@id/HR_label"
+            android:layout_alignRight="@id/HR_label"
+            android:elevation="8dp" />
+
+        <TextView
+            android:id="@+id/BR_label"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="10dp"
+            android:background="@mipmap/brerate_icon"
+            android:alpha="0.8"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/HR_label"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/BR_label_text"
+            android:id="@+id/br_num"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="#010101"
+            android:layout_alignTop="@+id/BR_label"
+            android:layout_marginTop="16dp"
+            android:layout_alignStart="@id/BR_label"
+            android:layout_alignLeft="@id/BR_label"
+            android:layout_alignEnd="@id/BR_label"
+            android:layout_alignRight="@id/BR_label"
+            android:elevation="8dp" />
+
+        <TextView
+            android:id="@+id/Batt_label"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="10dp"
+            android:background="@mipmap/batt_icon"
+            android:alpha="0.8"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/BR_label"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/batt_num"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#010101"
+            android:layout_alignTop="@+id/Batt_label"
+            android:layout_marginTop="14dp"
+            android:layout_alignStart="@id/Batt_label"
+            android:layout_alignLeft="@id/Batt_label"
+            android:layout_alignEnd="@id/Batt_label"
+            android:layout_alignRight="@id/Batt_label"
+            android:layout_marginRight="3dp"
+            android:elevation="8dp" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@id/pause_label"
+            android:id="@+id/pauseToggle"
+            android:textOff="Pause"
+            android:textOn="Resume"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp" />
+
+        <ProgressBar
+            android:id="@id/ecg_prog_bar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/grid_legend"
+            android:id="@+id/textView"
+            android:layout_alignTop="@id/GridBackground"
+            android:layout_alignRight="@id/GridBackground"
+            android:background="#b0ffffff"
+            android:textColor="#000101"
+            android:elevation="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_flag_btn"
+            android:id="@+id/eventbtn"
+            android:layout_alignBottom="@+id/GridBackground"
+            android:layout_toRightOf="@+id/pauseToggle"
+            android:layout_toEndOf="@+id/pauseToggle"
+            android:layout_marginLeft="10dp"
+            android:elevation="10dp"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.MinWidth"
+            android:outlineProvider="paddedBounds" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:id="@+id/button2"
+            android:layout_alignBottom="@+id/eventbtn"
+            android:layout_toRightOf="@+id/eventbtn"
+            android:layout_toEndOf="@+id/eventbtn"
+            android:layout_marginLeft="10dp"
+            android:elevation="10dp" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

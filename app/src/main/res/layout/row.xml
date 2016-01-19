@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal">
+    <TextView
+        android:id="@+id/upldDate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="2015/01/01"
+        android:gravity="center_horizontal"
+        android:layout_weight="0.07" />
+    <TextView
+        android:id="@+id/upldTime"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="00:35:30"
+        android:gravity="center_horizontal"
+        android:layout_weight="0.08" />
+    <TextView
+        android:id="@+id/diagnosis"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.45"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="Test"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/maxHR"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="Large Text"
+        android:layout_weight="0.42"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/recID"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_weight="0"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="Large Text"/>
+    <TextView
+        android:id="@+id/recFlagged"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_weight="0"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#00dd32"
+        android:textSize="16sp"
+        android:text="Large Text"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="banner">#B0B0B0</color>
+    <color name="background">#FFFFFF</color> 
+    <color name="ECGgraph">#008000</color>
+    <color name="HRgraph">#D50929</color>
+    <color name="HRnum">#D50929</color>
+    <color name="breaks">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="recordviewred">#41da0000</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="yellow">#56e8d400</color>
+    <color name="green">#3a008e00</color>
+</resources>

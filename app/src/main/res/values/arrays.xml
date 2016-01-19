@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu">
+    <item>@string/delete_record</item>
+    </string-array>
+
+    <string name="delete_record">Delete</string>
+
+    <string-array name="pref_gender_titles">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="pref_gender_values">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>

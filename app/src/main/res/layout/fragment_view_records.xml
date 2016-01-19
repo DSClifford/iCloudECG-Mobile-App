@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="edu.utk.biodynamics.icloudecg.ViewRecordsFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/upldDate"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="Date"
+            android:gravity="center_horizontal"
+            android:layout_weight="0.25" />
+        <TextView
+            android:id="@+id/upldTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="Time"
+            android:gravity="center_horizontal"
+            android:layout_weight="0.10" />
+        <TextView
+            android:id="@+id/diagnosis"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1.45"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="Analysis Result"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/maxHR"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="Heart Rate"
+            android:gravity="center_horizontal"
+            android:layout_weight="0.16"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:elevation="1dp" />
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#CCCCCC"
+            android:dividerHeight="1dp"
+            android:paddingLeft="2dp"
+            android:paddingStart="2dp"
+            android:paddingRight="2dp"
+            android:paddingEnd="2dp"
+            android:id="@+id/listView"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/no_records_label"
+        android:layout_gravity="center"
+        android:textColor="#ff080f" />
+
+</FrameLayout>

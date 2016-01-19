@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ECGgraph_label" type="id">ECG Graph Label</item>
+    <item name="Cstatus_label" type="id">Connection Status Label</item>
+    <item name="ECGgraph" type="id">ECG Graph</item>
+    <item name="connection_status" type="id">Connection Status</item>
+    <item name="ecg_prog_bar" type="id">ECG Load PB</item>
+    <item name="pause_label" type="id">Pause</item>
+</resources>
